@@ -28,4 +28,15 @@ def user_choice():
 
     return int(choice)
 
+def handle_input(user_choice):
+    if user_choice in range(1, 3):
+        game_board[0][user_choice - 1] = 'X'
+    elif user_choice in range(4, 6):
+        game_board[1][user_choice - 1] = 'X'
+    else:
+        game_board[1][user_choice - 1] = 'X'
+
+display_game(game_board)
+user_input = user_choice()
+handle_input(user_input)
 display_game(game_board)
