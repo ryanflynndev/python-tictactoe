@@ -36,7 +36,10 @@ def handle_input(user_choice):
     else:
         game_board[1][user_choice - 1] = 'X'
 
-display_game(game_board)
-user_input = user_choice()
-handle_input(user_input)
-display_game(game_board)
+
+def game_loop(game_board):
+    
+    display_game(game_board)
+    user_input = user_choice()
+    handle_input(user_input)
+    display_game(game_board)
